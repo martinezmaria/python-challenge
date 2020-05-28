@@ -34,18 +34,25 @@ with open(file_path, 'r') as csvfile:
         
 # calculate number of candidates and calculate total number of votes for each
         candidates_list.append(row[2])
+        # uniqueList = []
+    #     for name in candidates_list:
+    #         if name not in uniqueList:
+    #             uniqueList.append(name)
+
+    # print(uniqueList)
+
         if row[2] == "Khan":
-            khan_votes += 1
-            khan_percent = round(khan_votes / total_votes *100)
+                    khan_votes += 1
+                    khan_percent = round(khan_votes / total_votes *100)
         elif row[2] == "Correy":
-            correy_votes += 1
-            correy_percent = round(correy_votes / total_votes *100)
+                    correy_votes += 1
+                    correy_percent = round(correy_votes / total_votes *100)
         elif row[2] == "Li":
-            li_votes += 1
-            li_percent = round(li_votes / total_votes *100)
+                    li_votes += 1
+                    li_percent = round(li_votes / total_votes *100)
         elif row[2] == "O'Tooley":
-            otooley_votes += 1
-            otooley_percent = round(otooley_votes / total_votes *100)
+                    otooley_votes += 1
+                    otooley_percent = round(otooley_votes / total_votes *100)
 
 # find winner
 candidates_votes_each = ([khan_votes, correy_votes, li_votes, otooley_votes])
